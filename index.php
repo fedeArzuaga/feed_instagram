@@ -12,6 +12,6 @@ curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
 $content = curl_exec($client);
 curl_close($client);
 
-echo "<pre>"; print_r($content); echo "</pre>";
+echo "<pre>"; print_r(json_decode($content)); echo "</pre>";
 
 ?>
