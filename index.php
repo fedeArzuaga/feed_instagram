@@ -11,9 +11,10 @@ curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
 
 $decode_content = json_decode(curl_exec($client));
 $content = json_decode($decode_content);
+$data = $content[0];
 
 curl_close($client);
 
-echo "<pre>"; print_r($content); echo "</pre>";
+echo "<pre>"; print_r($data); echo "</pre>";
 
 ?>
