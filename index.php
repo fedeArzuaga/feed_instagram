@@ -9,7 +9,7 @@ curl_setopt($client, CURLOPT_URL, $basic_url.$query_url.$access_token);
 curl_setopt($client, CURLOPT_HEADER, 0);
 curl_setopt($client, CURLOPT_RETURNTRANSFER, true);
 
-$content = curl_exec($client);
+$content = json_decode(curl_exec($client));
 curl_close($client);
 
 echo "<pre>"; print_r(json_decode($content)); echo "</pre>";
